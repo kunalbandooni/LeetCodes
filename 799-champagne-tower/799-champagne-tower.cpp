@@ -1,20 +1,20 @@
 class Solution {
 public:
-    double champagneTower(int poured, int r, int c) {
-        double dp[101][101] = {0.0};
-        dp[0][0] = poured;
-        for (int i=0;i<100;i++)
-            for (int j=0;j<=i;j++) 
-                if (dp[i][j]>=1){ //if current glass is full
-                    
-                    dp[i+1][j]+= (dp[i][j]-1)/2.0; 
-                    //left of next row
-                    dp[i+1][j+1]+=(dp[i][j]-1)/2.0; 
-                    //right of next row
-                    
-                    dp[i][j] = 1; 
-                    //current glass remains as 1
+    double champagneTower(int poured, int query_row, int query_glass){
+        if(poured==0)
+            return 0;
+        vector<double> row = {(double)poured};
+        for (int i = 1; i <= query_row; i++) {
+            vector<double> rowNext(i + 1);
+            for (int j = 0; j < row.size(); j++) {
+                double spill = (row[j] - 1) / 2.0;
+                if (spill > 0) {
+                    rowNext[j] += spill;
+                    rowNext[j + 1] += spill;
                 }
-        return dp[r][c];
+            }
+            row = rowNext;
+        }
+        return min(1.0, row[query_glass]);
     }
 };
