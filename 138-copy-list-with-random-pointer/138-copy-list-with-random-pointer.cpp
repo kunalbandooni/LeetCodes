@@ -17,6 +17,10 @@ public:
 class Solution {
 public:
     Node* copyRandomList(Node* head) {
+        // because of next two lines, 
+        //      I got runtime error 5 times,
+        //          and so I ended up checking code
+        //              again and again
         if(!head)
             return NULL;
         Node* temp=head;
