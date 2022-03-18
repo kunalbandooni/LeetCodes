@@ -1,6 +1,7 @@
 class Solution {
 public:
     string removeDuplicateLetters(string s) {
+        // SLIDING WINDOW APPROACH
         vector<int> dict(256, 0);
         vector<bool> visited(256, false);
         for(auto ch : s)  dict[ch]++;
@@ -19,6 +20,8 @@ public:
             visited[c] = true;
         }
         return result.substr(1);
+        
+        // STACK APPROACH
         /*
         string res="";
         int lastPos[26] = {}; // the last position of the char
