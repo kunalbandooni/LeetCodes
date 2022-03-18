@@ -2,6 +2,7 @@ class Solution {
 public:
     string removeDuplicateLetters(string s) {
         // SLIDING WINDOW APPROACH
+        // youtube: https://www.youtube.com/watch?v=0tantogp8fc
         vector<int> dict(256, 0);
         vector<bool> visited(256, false);
         for(auto ch : s)  dict[ch]++;
@@ -11,7 +12,8 @@ public:
         for(auto c : s) {
             dict[c]--;
             /** to filter the previously visited elements **/
-            if(visited[c])  continue;
+            if(visited[c])  
+                continue;
             while(c < result.back() && dict[result.back()]) {
                 visited[result.back()] = false;
                 result.pop_back();
