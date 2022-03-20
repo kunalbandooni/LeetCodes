@@ -1,4 +1,5 @@
 class Solution {
+    //Best Solution so far:-  https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/discuss/252242/JavaC%2B%2BPython-Different-Ideas
 public:
     int minDominoRotations(vector<int>& A, vector<int>& B) {
         vector<int> countA(7), countB(7), same(7);
