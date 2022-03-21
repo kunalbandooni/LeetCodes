@@ -4,7 +4,7 @@ public:
         // https://leetcode.com/problems/partition-labels/discuss/1868842/JavaC%2B%2B-VISUALLY-EXPLAINEDDDDD!!
         // BEST EXPLANATION :D
         // TC: O(n)   
-        // SC: O(1) as alphabets would be max 26
+        // SC: O(1) as alphabets would be max 26, vector v[26] can also be used...
         unordered_map<char,int>mp;
         // filling impact of character's
         for(int i = 0; i < s.size(); i++){
