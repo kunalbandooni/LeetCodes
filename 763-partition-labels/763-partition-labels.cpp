@@ -3,7 +3,8 @@ public:
     vector<int> partitionLabels(string s) {
         // https://leetcode.com/problems/partition-labels/discuss/1868842/JavaC%2B%2B-VISUALLY-EXPLAINEDDDDD!!
         // BEST EXPLANATION :D
-        // TC: O(n)   & SC: O(n)
+        // TC: O(n)   
+        // SC: O(1) as alphabets would be max 26
         unordered_map<char,int>mp;
         // filling impact of character's
         for(int i = 0; i < s.size(); i++){
