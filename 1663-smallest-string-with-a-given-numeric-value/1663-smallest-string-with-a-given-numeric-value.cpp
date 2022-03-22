@@ -7,16 +7,8 @@ public:
         k=k-n;
         int j=n-1;
         while(k!=0){
-            int t;
-            if(k>=25){
-                t=25;
-                k=k-25;
-            }
-            else{
-                t=k;
-                k=0;
-            }
-            a[j]=a[j]+t;
+            a[j]=a[j]+min(25,k);
+            k=k-min(25,k);
             j--;
         }
         string s="";
