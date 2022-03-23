@@ -17,6 +17,20 @@ Example
 	Therfore total no of steps taken is divide->add i.e '2' which is the answer.
     
 */
+
+// ALGORITHM:-
+/*
+
+Step-1 Declare step counter with initial value 0.
+Step-2 Start Iterating with condition check whether target value is greater than startValue or not.
+Step-3 If target > startValue increment step counter by 1. And check whether target value is even or odd.
+Step-4 If target value is even then divide it by 2 else if it is odd add target value by 1.
+Step-5 Loop continues till target become small or equal to startValue.
+Step-6 If target <  startValue then we only add target by 1 till it become equal. So total number of add required can be found by 'startValue - target'. Because currently startValue is > targetValue.
+Step-7 Return step+startValue - target ;
+
+*/
+
 class Solution {
 public:
     int brokenCalc(int startValue, int target) {
