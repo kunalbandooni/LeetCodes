@@ -10,19 +10,14 @@ public:
             count++;
             j--;
         }
-        /*if(people.size()==2){
-            if(people[0]+people[1]==limit)
-        }*/
         while(i<=j){
-            if(i!=j and people[j]+people[i]<=limit){
+            if(people[j]+people[i]<=limit){
                 i++;
                 j--;
-                count++;
             }
-            else{
+            else
                 j--;
-                count++;
-            }
+            count++;
         }
         return count;
     }
