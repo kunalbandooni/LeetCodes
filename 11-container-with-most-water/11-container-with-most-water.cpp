@@ -6,12 +6,10 @@ public:
         int maxi=0;
         int i=0,j=height.size()-1;
         while(i<j){
-            if(height[i]>height[j]){
-                maxi=max(maxi,(j-i)*height[j--]);
-            }
-            else{
-                maxi=max(maxi,(j-i)*height[i++]);
-            }
+            if(height[i] > height[j])
+                maxi=max(maxi, (j-i) * height[j--]);
+            else
+                maxi=max(maxi, (j-i) * height[i++]);
         }
         return maxi;
     }
