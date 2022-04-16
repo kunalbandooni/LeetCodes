@@ -11,8 +11,20 @@
  */
 class Solution {
     int cur_sum = 0;
+    int sum = 0;
 public:
     TreeNode* convertBST(TreeNode* root) {
+        // shorter simpler code :)
+        if (root) {
+            convertBST(root->right);
+            root->val += sum;
+            sum = root->val;
+            convertBST(root->left);
+        }
+        return root;
+        
+        /*
+        Longer code
         if (!root) 
             return NULL;
         if (root->right)
@@ -20,6 +32,6 @@ public:
         root->val = (cur_sum += root->val);
         if (root->left)
             convertBST(root->left);
-        return root;
+        return root;*/
     }
 };
