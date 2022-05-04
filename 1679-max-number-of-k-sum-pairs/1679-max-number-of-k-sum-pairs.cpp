@@ -7,7 +7,8 @@ public:
   
         for(auto it=Map.begin(); it!=Map.end(); ++it){
             int num = it->first, count = it->second;
-            if(k - num == num) ans += count/2;   // if num is half of k add half of it's count in ans
+            if(k - num == num)
+                ans += count/2;   // if num is half of k add half of it's count in ans
             else if(Map.count(k - num)){   // find k-num in nums and add min freq of num or k-num to ans
                 int Min = min(count, Map[k-num]);
                 ans += Min;
