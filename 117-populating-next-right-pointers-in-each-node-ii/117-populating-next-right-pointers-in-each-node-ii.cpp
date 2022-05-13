@@ -17,6 +17,9 @@ public:
 */
 
 class Solution {
+    
+    // https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/discuss/962162/C%2B%2B-Iterative-Constant-Space-Solution-Explained-~100-Time-~75-Space
+    
 public:
     Node* connect(Node* root) {
         // support variables
