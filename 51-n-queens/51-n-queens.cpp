@@ -1,4 +1,5 @@
 class Solution {
+    // https://leetcode.com/problems/n-queens/discuss/19808/Accepted-4ms-c%2B%2B-solution-use-backtracking-and-bitmask-easy-understand.
 public:
     std::vector<std::vector<std::string> > solveNQueens(int n) {
         std::vector<std::vector<std::string> > res;
