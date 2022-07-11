@@ -13,8 +13,14 @@ class Solution {
     void recursion(TreeNode *root, int level, vector<int> &res){
         if(root==NULL) 
             return ;
+        
+        // you only add one node per level. 
+        // And this preorder recurs right node first. 
+        // So at each level you will add rightmost and others will automatically get skipped
         if(res.size()<level) 
             res.push_back(root->val);
+        
+        
         recursion(root->right, level+1, res);
         recursion(root->left, level+1, res);
     }
