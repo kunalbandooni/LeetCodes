@@ -1,5 +1,20 @@
 class Solution {
-    int c(int n,int k){
+    public:
+    vector<vector<int> > generate(int numRows) {
+        vector<vector<int>> r(numRows);
+
+        for (int i = 0; i < numRows; i++) {
+            r[i].resize(i + 1);
+            r[i][0] = r[i][i] = 1;
+  
+            for (int j = 1; j < i; j++)
+                r[i][j] = r[i - 1][j - 1] + r[i - 1][j];
+        }
+        
+        return r;
+    }
+    
+    /*int c(int n,int k){
         int res = 1; 
         // Since C(n, k) = C(n, n-k)
         if (k > n - k)
@@ -27,5 +42,5 @@ public:
             v.push_back(a);
         }
         return v;
-    }
+    }*/
 };
