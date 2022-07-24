@@ -1,5 +1,5 @@
 class Solution {
-    int f(int i, int buy, vector<int> p){
+    /*int f(int i, int buy, vector<int> p){
         if(i==p.size())  return 0;
         
         int profit = 0;
@@ -11,7 +11,7 @@ class Solution {
                         0 + f(i+1, 0, p));
         
         return profit;
-    }
+    }*/
 public:
     int maxProfit(vector<int>& prices) {
         //return f(0,1,prices);
