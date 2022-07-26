@@ -1,4 +1,5 @@
 class Solution {
+    // another solution using math formula : https://leetcode.com/problems/n-th-tribonacci-number/discuss/348503/O(1)-Solution-using-math.
 public:
     int tribonacci(int n) {
         if(n < 2)   return n;
