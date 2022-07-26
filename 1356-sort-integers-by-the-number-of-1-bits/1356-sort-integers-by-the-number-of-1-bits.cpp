@@ -1,14 +1,4 @@
 class Solution {
-    int count_1(int n){
-        int c = 0;
-        
-        while(n){
-            c += n%2;
-            n=n/2;
-        }
-        
-        return c;
-    }
     static bool func(int a, int b){
         int n=a,m=b;
         int c1 = 0;
@@ -27,7 +17,6 @@ class Solution {
             return n < m;
         
         return c1 < c2;
-        //return count_1(a) > count_1(b);
     }
 public:
     vector<int> sortByBits(vector<int>& arr) {
