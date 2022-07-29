@@ -28,7 +28,7 @@ public:
         // i.e. first elem greater than equal to itself in lis
         sort(env.begin(), env.end(), cmp);
     
-        vector<int> lis; // Longest Increasing Subsequence =D
+        vector<int> lis; // Longest Increasing Subsequence =D for ene[i][1]
 
         for(int i = 0;i<env.size();i++){
             int ele = env[i][1];
