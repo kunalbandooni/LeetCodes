@@ -1,0 +1,37 @@
+class Solution {
+public:
+    bool validMountainArray(vector<int>& arr) {
+        bool up = true;
+        int up_till = 0, maxi = INT_MIN;
+        
+        for(int i=0;i<arr.size();i++)
+            if(maxi < arr[i]){
+                maxi = arr[i];
+                up_till = i;
+            }
+        
+        if(up_till == 0 || up_till == arr.size()-1) return false;
+        
+        for(int i = 0;i<up_till-1;i++)
+            if(arr[i] >= arr[i+1])
+                return false;
+        
+        for(int i = up_till;i<arr.size()-1;i++)
+            if(arr[i] <= arr[i+1])
+                return false;
+        
+        /*for(int i=1;i<arr.size();i++){
+            if(up){
+                if(arr[i] < arr[i-1])
+                    up = false;
+                
+            }
+            else{
+                if(arr[i] > arr[i-1])
+                    return false;
+            }
+        }*/
+        
+        return true;
+    }
+};
