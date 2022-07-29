@@ -27,20 +27,18 @@ public:
         // another envolop of same height, if we apply lower_bound
         // i.e. first elem greater than equal to itself in lis
         sort(env.begin(), env.end(), cmp);
-        
-        vector<int> lis;
-        
+    
+        vector<int> lis; // Longest Increasing Subsequence =D
+
         for(int i = 0;i<env.size();i++){
             int ele = env[i][1];
-            
+
             int idx = lower_bound(lis.begin(), lis.end(), ele) - lis.begin();
-            
+
             if(idx >= lis.size()) 
                 lis.push_back(ele);
-            else 
-                lis[idx] = ele;
+            else    lis[idx] = ele;
         }
-        
         return lis.size();
     }
 };
