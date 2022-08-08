@@ -1,10 +1,12 @@
 class Solution {
-    /*int dp[2501][2501];
+    /*
+    //MEMOIZATION: TLE
+    int dp[2501][2501];
     int f(int i, int prev, vector<int> a){
         if(i < 0)
             return 0;
         
-        if(prev!=-1 and dp[i][prev]!=-1) return dp[i][prev];
+        if(dp[i][prev+1]!=-1) return dp[i][prev+1];
         
         int notTake = f(i-1, prev, a);
         
@@ -12,8 +14,7 @@ class Solution {
         if(prev == -1 or a[prev] > a[i])
             take = 1 + f(i-1, i, a);
         
-        if(prev!=-1)
-            dp[i][prev] = max(take,notTake);
+        dp[i][prev+1] = max(take,notTake);
         
         return max(take, notTake);
     }*/
