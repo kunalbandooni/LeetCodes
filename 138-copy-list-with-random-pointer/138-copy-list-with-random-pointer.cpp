@@ -25,6 +25,8 @@ public:
             return NULL;
         Node* temp=head;
         Node* pt;
+        
+        // First pass creates a deep copy
         while(temp!=NULL){
             Node* p=new Node(temp->val);
             p->next=temp->next;
@@ -32,6 +34,10 @@ public:
             temp=p->next;
         }
         
+        
+        // connecting the pointers now...
+        
+        // random ones
         Node* p;
         temp=head;
         while(temp!=NULL){
@@ -43,6 +49,7 @@ public:
             temp=p->next;
         }
         
+        // next pointers now
         p=head->next;
         temp=head;
         pt=p;
