@@ -1,4 +1,5 @@
 class Solution {
+    // https://leetcode.com/problems/reduce-array-size-to-the-half/discuss/1319470/C%2B%2B-Simple-and-Clean-Solution-Explained-Easy-to-Understand
 public:
     int minSetSize(vector<int>& arr) {
         unordered_map<int, int> counter;
