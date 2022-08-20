@@ -1,5 +1,5 @@
 class Solution {
-    // Check out Lee's solution in discussion.
+    // Check out Lee215's solution in discussion.
     // Blew up my mind!!
 public:
     int minRefuelStops(int target, int startFuel, vector<vector<int>>& stations) {
