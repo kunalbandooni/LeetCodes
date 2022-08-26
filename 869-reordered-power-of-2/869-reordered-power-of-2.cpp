@@ -1,4 +1,5 @@
 class Solution {
+    // Another approach is by using Hashing
 public:
     bool reorderedPowerOf2(int n) {
         vector<string> power;
