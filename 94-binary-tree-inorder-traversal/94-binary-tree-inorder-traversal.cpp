@@ -20,7 +20,27 @@ class Solution {
     }
 public:
     vector<int> inorderTraversal(TreeNode* root) {
-        inorder(root);
+        // Recursive is correct, now do for iterative
+        //inorder(root);
+        
+        if(!root)   return v;
+        
+        stack<TreeNode*> st;
+        TreeNode* temp = root;
+        while(true){
+            if(temp){
+                st.push(temp);
+                temp = temp->left;
+            }
+            else{
+                if(st.empty()) break;
+                temp = st.top();
+                st.pop();
+                v.push_back(temp->val);
+                temp = temp->right;
+            }
+        }
+        
         return v;
     }
 };
