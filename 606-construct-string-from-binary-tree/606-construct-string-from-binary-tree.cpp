@@ -10,22 +10,6 @@
  * };
  */
 class Solution {
-    void func(TreeNode* root, string &s){
-        if(!root)   return;
-        s = s + '(' + (char)(root->val + '0');
-        if(root->left){
-            func(root->left, s);
-        }
-        if(root->right and !root->left){
-            s = s + "()";
-            func(root->right, s);
-        }
-        else if(root->right){
-            func(root->right, s);
-        }
-        
-        s = s + ')';
-    }
 public:
     string tree2str(TreeNode* root) {
         string ans = to_string(root->val);
