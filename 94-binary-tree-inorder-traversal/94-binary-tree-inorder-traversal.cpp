@@ -25,6 +25,31 @@ public:
         
         if(!root)   return v;
         
+        // Morris Inorder Traversal
+        while(root){
+            if(root->left==NULL){
+                v.push_back(root->val);
+                root = root->right;
+            }
+            else{
+                TreeNode* temp = root->left;
+                while(temp->right and temp->right!=root)
+                    temp = temp->right;
+
+                if(temp->right == NULL){
+                    temp->right = root;
+                    root = root->left;
+                }
+                else{
+                    temp->right = NULL;
+                    v.push_back(root->val);
+                    root = root->right;
+                }
+            }
+        }
+        
+        /*
+        // Using stack
         stack<TreeNode*> st;
         TreeNode* temp = root;
         while(true){
@@ -39,7 +64,7 @@ public:
                 v.push_back(temp->val);
                 temp = temp->right;
             }
-        }
+        }*/
         
         return v;
     }
