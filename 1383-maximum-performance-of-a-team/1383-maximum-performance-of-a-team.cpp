@@ -15,6 +15,9 @@ class Solution {
 public:
     int maxPerformance(int n, vector<int>& speed, vector<int>& efficiency, int k) {
         // return func(0, k, speed, efficiency, 0, INT_MAX);
+        
+        // Saw this: https://www.youtube.com/watch?v=Y7UTvogADH0
+        // and got the optimised solution
         vector<pair<int, int>> ess(n);
         for (int i = 0; i < n; ++i)
             ess[i] = {efficiency[i], speed[i]};
