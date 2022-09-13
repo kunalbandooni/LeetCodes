@@ -1,4 +1,8 @@
 class Solution {
+    
+    // Actually quite simple if you understand the test cases...
+    // Learnt from: https://www.youtube.com/watch?v=q605lZZydKI
+    // Explained really well! Pay attention.
 public:
     bool validUtf8(vector<int>& data) {
         int n = data.size(); 
