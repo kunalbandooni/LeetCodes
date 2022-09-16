@@ -9,7 +9,7 @@ class Solution {
             return 0;
         
         return dp[index][start] = max(multi[index]*nums[start] + 
-                                        helper(index+1, nums,multi, start+1),
+                                        helper(index+1, nums, multi, start+1),
                                       multi[index]*nums[end]+ 
                                         helper(index+1, nums, multi, start) );
        
