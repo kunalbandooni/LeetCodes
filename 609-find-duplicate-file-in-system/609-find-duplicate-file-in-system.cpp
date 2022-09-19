@@ -1,4 +1,6 @@
 class Solution {
+    // MANDATORY CHECK THE BELOW LINK, THE FOLLOW UP QUESTIONS
+    // https://leetcode.com/problems/find-duplicate-file-in-system/discuss/104123/C%2B%2B-clean-solution-answers-to-follow-up
 public:
     vector<vector<string>> findDuplicate(vector<string>& paths) {
         unordered_map<string, vector<string>> files;
