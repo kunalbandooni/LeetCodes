@@ -7,6 +7,13 @@ public:
             if(x-a[mid] > a[mid+k]-x) lo=mid+1;
             else hi=mid;
         }
-        return vector<int> (a.begin()+lo, a.begin()+lo+k);
+        
+        vector<int> ans;
+        
+        for(int i = lo; i<k+lo;i++)
+            ans.push_back(a[i]);
+        
+        return ans;
+        //vector<int> (a.begin()+lo, a.begin()+lo+k);
     }
 };
