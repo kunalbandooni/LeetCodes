@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<vector<int>> getSkyline(vector<vector<int>>& v) {
-        priority_queue<pair<int,int>> pq ;  // first =? height , second => end_time
+        priority_queue<pair<int,int>> pq ;  // first => height , second => end_time
     
         int n = v.size();
         vector<vector<int>>res;
