@@ -1,4 +1,7 @@
 class Solution {
+    
+    // Greedy fails, because we cannot sort the array, I was trying to do that T-T
+    
     int t[301][11];
     int solve(vector<int>& jd, int n, int idx, int d) {
         //if you have only 1 day, then you will all the remaining jobs
