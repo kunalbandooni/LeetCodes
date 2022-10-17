@@ -1,11 +1,9 @@
 class Solution {
 public:
     bool checkIfPangram(string sentence) {
-        set<char> st;
+        unordered_set<char> st;
         for(auto i:sentence)
             st.insert(i);
-        if(st.size() < 26)
-            return false;
-        return true;
+        return (st.size() == 26);
     }
 };
