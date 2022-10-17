@@ -4,6 +4,8 @@ public:
         unordered_set<char> st;
         for(auto i:sentence)
             st.insert(i);
-        return (st.size() == 26);
+        if(st.size() < 26)
+            return false;
+        return true;
     }
 };
