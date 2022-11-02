@@ -7,16 +7,13 @@ public:
         
         unordered_set<string> dictionary; // make dictionary set 
         for(int i = 0; i < size; i++) // insert every word of bank into the set
-        {
             dictionary.insert(bank[i]);
-        }
+    
         
         // if end word is not present into the dictionary,
         // will return false from here
         if(dictionary.find(end) == dictionary.end())
-        {
             return -1;
-        }
         
         // choices that are availble to us
         vector<char> available = {'A', 'C', 'G', 'T'};
@@ -41,9 +38,7 @@ public:
                 q.pop(); // pop from queue
                 
                 if(curr == end) // if curr word equals to end, return ans from here
-                {
                     return ans;
-                }
                 
                 // now for every index of curr word
                 for(int i = 0; i < 8; i++)
