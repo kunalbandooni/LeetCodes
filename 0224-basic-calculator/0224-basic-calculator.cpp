@@ -18,7 +18,7 @@ class Solution {
                 string strNum{""};
                 while (i < s.size() && isdigit(s[i])) 
                     strNum += s[i++];
-                int num = std::stoi(strNum);
+                int num = stoi(strNum);
                 res+=negFlag?-num:num;
                 negFlag=false;
             }
